@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  
+  <div class="main">
+    <h1 id="title">Survey Form Exam Page</h1>
+  
+  <p id="description">
+    Thank you for helping us improve our platform
+  </p>
+  
+    <div class="main-content">
+      <div class="form-content">
+        <form id="survey-form">
+          <label for="name" id="name-label">Name</label>
+          <input id="name" type="text" required placeholder="Enter Your Name" />
+          
+          <label for="email" id="email-label"> Email</label>
+          <input id="email" type="email" required placeholder="Enter Your Email" />
+          
+          <label for="number" id="number-label"> Rate Your Experience from 1 to 10 </label>
+          <input id="number" type="number" min="1" max="10" required placeholder="Enter Your Rate" />
+       
+                 
+          <label for="dropdown">Which category best describes you</label>
+          <select id="dropdown">
+            <option value="single">Single</option>
+            <option value="single-parent">
+             Single Parent</option>
+            <option value="married-with-children">
+              Married With Children</option>
+            <option value="married-no-children">
+              Married No Children</option>
+            <option value="Divorced">Divorced</option>
+          </select>
+            
+                 
+      <fieldset>
+        <legend>
+        Would you recommend our service to a friend?</legend>
+        <input type="radio" name="recommend" checked id="definitely" value="definitley" /><label for="definitiley"> Definitley</label><br>
+        
+        <input type="radio" name="recommend" id="maybe" value="maybe" /><label for="maybe"> Maybe</label><br>
+        
+        <input type="radio" name="recommend" id="no" value="no" /><label for="no"> No </label><br>
+        </fieldset>
+          
+          <p>What would you like to see improved?</p>
+            <input type="checkbox" id="more-sessions" value="more-sessions" /><label for="more-sessions"> More Sessions</label><br>
+          
+            <input type="checkbox" id="longer-sessions" value="longer-sessions" /><label for="longer-sessions"> Longer Sessions</label><br>
+          
+            <input type="checkbox" id="beginner-courses" value="beginner-courses" /><label for="beginner-courses"> Beginner Courses</label><br>
+          
+          <label for="comment"> Any comments or suggestions? </label>
+          <textarea rows="4" cols="50" id="comment"> Add your comment here...</textarea>
+                 
+          <button type="submit" id="submit"> Submit </button>
+          
+      </form>
+      </div>
+    </div>  
+  </div>
+    
+  
+  
+  
+</html>
+
+body {
+  font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+}
+
+.main {
+  background-image: url(https://getwallpapers.com/wallpaper/full/0/d/b/399501.jpg);
+  background-size: contain;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #ffffff;
+  overflow-y: scroll;
+  font-size: 22px;
+}
+
+.main:after {
+  content: "";
+  background-color: rgb (0, 0, 0, .8) 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.main > h1,
+.main > p {
+  text-align: center;
+  font-family: 30px;
+  z-index: 2;
+  position: relative;
+}
+
+.main-content {
+  background-color: rgb(27, 30, 65, .7);
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  padding: 45px;
+  margin: auto;
+  margin-bottom: 40px;
+  margin-radius: 5px;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px -1px 10px 5px teal;
+}
+
+#name, #email, #number, #dropdown, #comment {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 5px 10px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+label[for=name],
+label[for=email],
+label[for=number],
+label[for=dropdown],
+label[for=comment] {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#more-sessions,
+#longer-sessions,
+#beginner-courses,
+fieldset-input {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#comment {
+  min-height: 170px;
+  }
+
+label[for=comment] {
+  margin-top: 35px;
+}
+
+#submit {
+  display: bock;
+  width: 100%;
+  padding: 12px;
+  background: teal;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
